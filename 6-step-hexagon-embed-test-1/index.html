@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Six Steps to Liberation</title>
+    <style>
+      @font-face {
+        font-family: "Tiempos Text";
+        src: url("assets/TiemposText-Regular.eot");
+        src: url("assets/TiemposText-Regular.eot?#iefix") format("embedded-opentype"),
+          url("assets/TiemposText-Regular.woff") format("woff"),
+          url("assets/TiemposText-Regular.ttf") format("truetype");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Tiempos Headline";
+        src: url("assets/TiemposHeadline-Medium.eot");
+        src: url("assets/TiemposHeadline-Medium.eot?#iefix") format("embedded-opentype"),
+          url("assets/TiemposHeadline-Medium.woff") format("woff"),
+          url("assets/TiemposHeadline-Medium.ttf") format("truetype");
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      :root {
+        --paper-base: #e8e3d4;
+        --navy: #33291D;
+        --navy-deep: #1f1812;
+        --orange: #d97842;
+        --orange-deep: #b85f30;
+        --sky: #7fa8c9;
+        --sky-deep: #5a86a8;
+        --sky-navy: #4f6a85;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background-color: #1a1a1a;
+        color: var(--navy);
+        font-family: "Tiempos Text", Georgia, serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow: hidden;
+      }
+
+      /* Paper texture now lives on the square stage so the 1:1 crop reads
+         clearly; the area outside the square is a neutral dark backdrop. */
+      .square-stage {
+        background-color: var(--paper-base);
+        background-image: url("assets/paper-bg.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      #root {
+        width: 100%;
+        height: 100%;
+      }
+
+      .orbit-icon-btn:focus-visible {
+        outline: 2px dashed var(--orange);
+        outline-offset: 6px;
+        border-radius: 50%;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(51, 41, 29, 0.18);
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/framer-motion@11.11.17/dist/framer-motion.js"></script>
+    <script>
+      // Expose framer-motion globals for the JSX files
+      window.motion = window.FramerMotion ? window.FramerMotion.motion : window.Motion ? window.Motion.motion : null;
+      window.AnimatePresence = window.FramerMotion ? window.FramerMotion.AnimatePresence : window.Motion ? window.Motion.AnimatePresence : null;
+    </script>
+    <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+    <script type="text/babel" src="content.jsx"></script>
+    <script type="text/babel" src="orbit.jsx"></script>
+    <script type="text/babel" src="detail.jsx"></script>
+    <script type="text/babel" src="launch.jsx"></script>
+    <script type="text/babel" src="app.jsx"></script>
+  </body>
+</html>
