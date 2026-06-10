@@ -1,0 +1,13 @@
+{
+  "version": "1.0",
+  "type": "rich",
+  "provider_name": "Awake and Embodied",
+  "provider_url": "https://insightocean.github.io/widget-assets/",
+  "title": "Six Steps to Liberation",
+  "width": 680,
+  "height": 680,
+  "thumbnail_url": "https://insightocean.github.io/widget-assets/6-step-hexagon-embed-test-1/assets/paper-bg.png",
+  "thumbnail_width": 680,
+  "thumbnail_height": 680,
+  "html": "<iframe src=\"https://insightocean.github.io/widget-assets/6-step-hexagon-embed-test-1/\" width=\"680\" height=\"680\" style=\"border:0;max-width:100%;aspect-ratio:1/1;\" allowfullscreen></iframe>"
+}
